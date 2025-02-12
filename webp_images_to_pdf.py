@@ -20,7 +20,7 @@ def convert_image(img_path):
         return None
 
 # 获取并排序文件
-webp_files = natsorted(glob.glob("*.jpg"))
+webp_files = natsorted(glob.glob("*.webp"))
 
 # 转换图片并过滤失败项
 images = [img for img in (convert_image(f) for f in webp_files) if img is not None]
